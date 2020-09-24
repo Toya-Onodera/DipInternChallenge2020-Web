@@ -1,0 +1,5 @@
+scikit-learn
+werkzeug
+flask
+numpy
+pandas
