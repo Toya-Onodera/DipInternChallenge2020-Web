@@ -3,3 +3,4 @@ werkzeug
 flask
 numpy
 pandas
+Flask-Cors
