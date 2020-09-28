@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from flask import Flask, request, make_response
+from flask_cors import CORS
 from werkzeug.datastructures import FileStorage
 from sklearn.preprocessing import LabelEncoder
 
@@ -13,6 +14,7 @@ with open('./static/model.pickle', mode='rb') as fp:
     model = pickle.load(fp)
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/api/v1/pred', methods=['POST'])
